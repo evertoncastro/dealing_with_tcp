@@ -29,10 +29,7 @@ while True:
             else:
                 print >> sys.stderr, 'no more data from', client_address
                 break
-    except Exception as e:
-        print 'Error: '+ e.message
 
     finally:
-        pass
-        # Clean up the connection
-        #connection.close()
+        #Clean up the connection
+        connection.close()
