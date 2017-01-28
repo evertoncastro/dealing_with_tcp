@@ -1,11 +1,14 @@
 import socket
 import sys
 
+# used from https://pymotw.com/2/socket/tcp.html#easy-client-connections
+
 # This is the TCP/IP Socket
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
 # Bind the socket to the port
-server_address = ('localhost', 9001)
+server_name =  socket.gethostbyname(socket.gethostname())
+server_address = (server_name, 9000)
 print >>sys.stderr, 'starting up on %s port %s' % server_address
 sock.bind(server_address)
 
