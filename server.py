@@ -31,5 +31,5 @@ while True:
                 break
 
     finally:
-        #Clean up the connection
+        ##Clean up the connection
         connection.close()
